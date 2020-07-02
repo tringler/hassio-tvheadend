@@ -23,6 +23,9 @@
       "9981/tcp": "TVH 1",
       "9982/tcp": "TVH 2"
     },
+    "map": [
+      "share:rw"
+    ],
     "schema": {
     },
     "options": {

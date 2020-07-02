@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/tail -f /dev/null
+/usr/bin/tvheadend --firstrun -u root -g root -c /share/tvheadend
