@@ -2,8 +2,7 @@ ARG BUILD_FROM=homeassistant/base
 FROM ${BUILD_FROM}
 
 RUN echo "[INFO] Installing TVHeadend"
-RUN apk add --update tvheadend
-    && rm -rf /var/cache/apk/*
+RUN apk add --update tvheadend && rm -rf /var/cache/apk/*
 
 RUN echo "[INFO] Starting TVHeadend"
 COPY run.sh /run.sh
