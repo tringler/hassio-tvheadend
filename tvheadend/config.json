@@ -4,6 +4,7 @@
     "slug": "tvheadend",
     "description": "TVHeadend Add-On",
     "url": "https://github.com/tringler/hassio-tvheadend",
+    "webui": "http://[HOST]:[PORT:9981]/",
     "startup": "services",
     "arch": [
       "aarch64",
@@ -19,8 +20,8 @@
 
     },
     "ports_description": {
-      "9981/tcp": "TVH 1",
-      "9982/tcp": "TVH 2"
+      "9981/tcp": "TVH Webinterface",
+      "9982/tcp": "TVH HTSP"
     },
     "map": [
       "share:rw"
