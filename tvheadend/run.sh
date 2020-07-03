@@ -6,14 +6,13 @@ if  [ "$(ls -A /share/tvheadend/wg++)" ]; then
     echo "[INFO] Webgrab+ already installed"
 else
     echo "[INFO] No webgrab+ installation found - Installing webgrab+"
-    cd /share/tvheadend/wg++
+    cd /tmp
     wget http://www.webgrabplus.com/sites/default/files/download/SW/V2.1.0/WebGrabPlus_V2.1_install.tar.gz
     tar -xvf WebGrabPlus_V2.1_install.tar.gz && rm WebGrabPlus_V2.1_install.tar.gz
-    mv .wg++/ wg++
-    cd wg++
+    mv .wg++/ /share/tvheadend/wg++
+    cd /share/tvheadend/wg++
     ./install.sh
 
-    cd /share/tvheadend/wg++
     rm -rf siteini.pack/
     git clone https://github.com/DeBaschdi/webgrabplus-siteinipack.git
     cp -R webgrabplus-siteinipack/siteini.pack/ siteini.pack
