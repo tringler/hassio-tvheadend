@@ -3,7 +3,6 @@
     "version": "0.1",
     "slug": "tvheadend",
     "description": "TVHeadend Add-On",
-    "auto_uart": true,
     "url": "https://github.com/tringler/hassio-tvheadend",
     "startup": "services",
     "arch": [
