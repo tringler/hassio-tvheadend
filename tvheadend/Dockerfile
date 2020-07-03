@@ -3,6 +3,7 @@ FROM ${BUILD_FROM}
 
 RUN echo "[INFO] Installing TVHeadend"
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' > /etc/apk/repositories
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' > /etc/apk/repositories
 RUN apk add --update tvheadend git mono && rm -rf /var/cache/apk/*
 
 RUN echo "[INFO] Starting TVHeadend"
