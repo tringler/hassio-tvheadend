@@ -2,7 +2,8 @@ ARG BUILD_FROM=homeassistant/base
 FROM ${BUILD_FROM}
 
 RUN echo "[INFO] Installing TVHeadend"
-RUN apk add --update tvheadend && rm -rf /var/cache/apk/*
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' > /etc/apk/repositories
+RUN apk add --update tvheadend git mono && rm -rf /var/cache/apk/*
 
 RUN echo "[INFO] Starting TVHeadend"
 COPY run.sh /run.sh
