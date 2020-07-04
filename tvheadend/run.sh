@@ -1,5 +1,7 @@
 #!/bin/bash
 mkdir -p /share/tvheadend/recordings
+mkdir -p ~/.wg++
+ln -sf /share/tvheadend/wg++/guide.xml ~/.wg++/guide.xml
 
 #Install WebGrabPlus
 if  [ "$(ls -A /share/tvheadend/wg++)" ]; then
@@ -17,10 +19,9 @@ else
     git clone https://github.com/DeBaschdi/webgrabplus-siteinipack.git
     cp -R webgrabplus-siteinipack/siteini.pack/ siteini.pack
     cp siteini.pack/International/horizon.tv.* siteini.user/
-
-    wget -O /usr/bin/tv_grab_wg++ http://www.webgrabplus.com/sites/default/files/tv_grab_wg.txt
-    chmod a+x /usr/bin/tv_grab_wg++
 fi
 
+wget -O /usr/bin/tv_grab_wg++ http://www.webgrabplus.com/sites/default/files/tv_grab_wg.txt
+chmod a+x /usr/bin/tv_grab_wg++
 
 /usr/bin/tvheadend --firstrun -u root -g root -c /share/tvheadend
