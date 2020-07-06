@@ -24,4 +24,7 @@ fi
 wget -O /usr/bin/tv_grab_wg++ http://www.webgrabplus.com/sites/default/files/tv_grab_wg.txt
 chmod a+x /usr/bin/tv_grab_wg++
 
+echo "0 0 * * * /share/tvheadend/wg++/run.sh" >> /var/spool/cron/root
+
+/usr/bin/crond
 /usr/bin/tvheadend --firstrun -u root -g root -c /share/tvheadend
