@@ -13,12 +13,12 @@ else
     tar -xvf WebGrabPlus_V2.1_install.tar.gz && rm WebGrabPlus_V2.1_install.tar.gz  && \
     mv .wg++/ /share/tvheadend/wg++  && \
     cd /share/tvheadend/wg++  && \
-    ./install.sh > /dev/null
+    ./install.sh
 
     rm -rf siteini.pack/  && \
     git clone https://github.com/DeBaschdi/webgrabplus-siteinipack.git  && \
     cp -R webgrabplus-siteinipack/siteini.pack/ siteini.pack  && \
-    cp siteini.pack/International/horizon.tv.* siteini.user/ > /dev/null
+    cp siteini.pack/International/horizon.tv.* siteini.user/
 fi
 
 wget -O /usr/bin/tv_grab_wg++ http://www.webgrabplus.com/sites/default/files/tv_grab_wg.txt  && \
@@ -30,7 +30,7 @@ crond
 echo "[INFO] Installing Sundtek Drivers"
 wget http://www.sundtek.de/media/sundtek_netinst.sh  && \
 chmod a+x sundtek_netinst.sh  && \
-./sundtek_netinst.sh -docker > /dev/null
+./sundtek_netinst.sh -netinst -createnodes
 
 echo "[INFO] Starting TVHeadend"
 /usr/bin/tvheadend --firstrun -u root -g root -c /share/tvheadend
