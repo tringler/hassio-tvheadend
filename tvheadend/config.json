@@ -19,7 +19,7 @@
       "9982/tcp": 9982
 
     },
-    "ports_description": {
+        "ports_description": {
       "9981/tcp": "TVH Webinterface",
       "9982/tcp": "TVH HTSP"
     },
@@ -27,9 +27,8 @@
       "share:rw"
     ],
     "schema": {
-      "devices": ["match(\/dev\/tty[A-Z]*[0-9]:rwm)"]
     },
     "options": {
-      "devices": ["/dev/ttyACM0:rwm"]
+      "devices": ["/dev/ttyACM0:/dev/ttyACM0:rwm"]
   }
 }
