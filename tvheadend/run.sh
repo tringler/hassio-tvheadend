@@ -30,7 +30,7 @@ crond
 echo "[INFO] Installing Sundtek Drivers"
 wget http://www.sundtek.de/media/sundtek_netinst.sh  && \
 chmod a+x sundtek_netinst.sh  && \
-./sundtek_netinst.sh -netinst -createnodes
+./sundtek_netinst.sh -docker -createnodes
 
 echo "[INFO] Starting TVHeadend"
 /usr/bin/tvheadend --firstrun -u root -g root -c /share/tvheadend
