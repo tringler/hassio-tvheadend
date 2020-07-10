@@ -6,6 +6,7 @@
     "url": "https://github.com/tringler/hassio-tvheadend",
     "webui": "http://[HOST]:[PORT:9981]/",
     "startup": "services",
+    "udev": true,
     "devices": ["/dev/ttyACM0:/dev/ttyACM0:rwm"],
     "arch": [
       "aarch64",
