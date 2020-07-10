@@ -9,18 +9,6 @@
     "url": "https://github.com/tringler/hassio-tvheadend",
     "webui": "http://[HOST]:[PORT:9981]/",
     "startup": "services",
-    "privileged": [
-      "NET_ADMIN",
-      "SYS_ADMIN",
-      "SYS_RAWIO",
-      "SYS_TIME",
-      "SYS_NICE",
-      "SYS_RESOURCE",
-      "SYS_PTRACE",
-      "SYS_MODULE",
-      "DAC_READ_SEARCH"
-      
-    ],
     "full_access": "true",
     "arch": [
       "aarch64",
