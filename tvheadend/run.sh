@@ -27,11 +27,5 @@ chmod a+x /usr/bin/tv_grab_wg++
 echo "0 0 * * * /share/tvheadend/wg++/run.sh" >> /var/spool/cron/root
 crond
 
-echo "[INFO] Installing Sundtek Drivers"
-wget http://www.sundtek.de/media/sundtek_netinst.sh  && \
-chmod a+x sundtek_netinst.sh  && \
-./sundtek_netinst.sh -easyvdr && ./sundtek_netinst.sh -docker
-
 echo "[INFO] Starting TVHeadend"
-/opt/bin/mediaclient --start
 /usr/bin/tvheadend --firstrun -u root -g root -c /share/tvheadend
