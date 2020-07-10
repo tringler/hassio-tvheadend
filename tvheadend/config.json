@@ -27,7 +27,9 @@
       "share:rw"
     ],
     "schema": {
+      "devices": ["match(\/dev\/tty[A-Z]*[0-9]:rwm)"]
     },
     "options": {
+      "devices": ["/dev/ttyACM0:rwm"]
   }
 }
