@@ -30,7 +30,7 @@ crond
 echo "[INFO] Installing Sundtek Drivers"
 wget http://www.sundtek.de/media/sundtek_netinst.sh  && \
 chmod a+x sundtek_netinst.sh  && \
-./sundtek_netinst.sh
+./sundtek_netinst.sh -easyvdr
 
 echo "[INFO] Starting TVHeadend"
 /opt/bin/mediaclient --start
